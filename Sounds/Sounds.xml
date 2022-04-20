@@ -7,12 +7,12 @@
 		<engine>
 			<name>Engine starting</name>
 			<mode>looped</mode>
-			<path>Aircraft/MQ-9/Sounds/Startup.wav</path>
+			<path>Aircraft/MQ-9-Electric/Sounds/Startup.wav</path>
 			<condition>
 				<property>engines/engine[0]/starter</property>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<type>log</type>
 				<factor>0.6</factor>
 				<offset>0.5</offset>
@@ -21,7 +21,7 @@
 				<property>sim/sound/cabin</property>
 			</volume>
 			<pitch>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<type>log</type>
 				<factor>0.4</factor>
 				<offset>0.1</offset>
@@ -44,11 +44,11 @@
 		<engine>
 			<name>Engine running</name>
 			<mode>looped</mode>
-			<path>Aircraft/MQ-9/Sounds/Running.wav</path>
+			<path>Aircraft/MQ-9-Electric/Sounds/Running.wav</path>
 			<condition>
 				<or>
 					<greater-than>
-						<property>engines/engine[0]/n2</property>
+						<property>engines/engine[0]/rpm</property>
 						<value type="double">19.9</value>
 					</greater-than>
 					<and>
@@ -56,14 +56,14 @@
 							<property>engines/engine[0]/starter</property>
 						</not>
 						<greater-than>
-							<property>engines/engine[0]/n2</property>
+							<property>engines/engine[0]/rpm</property>
 							<value type="double">1</value>
 						</greater-than>
 					</and>
 				</or>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<type>log</type>
 				<factor>0.4</factor>
 				<offset>0.2</offset>
@@ -72,7 +72,7 @@
 				<property>sim/sound/E_volume</property>
 			</volume>
 			<pitch>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<factor>0.004</factor>
 				<offset>0.8</offset>
 			</pitch>
@@ -81,12 +81,12 @@
 		<engine>
 			<name>Engine running plus</name>
 			<mode>looped</mode>
-			<path>Aircraft/MQ-9/Sounds/Running.wav</path>
+			<path>Aircraft/MQ-9-Electric/Sounds/Running.wav</path>
 			<condition>
 				<property>engines/engine[0]/running</property>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<type>log</type>
 				<factor>0.6</factor>
 				<offset>0.5</offset>
@@ -95,7 +95,7 @@
 				<property>sim/sound/cabin</property>
 			</volume>
 			<pitch>
-				<property>engines/engine[0]/n2</property>
+				<property>engines/engine[0]/rpm</property>
 				<type>log</type>
 				<factor>0.4</factor>
 				<offset>0.1</offset>
@@ -258,7 +258,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station1/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Missile.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Missile.wav</path>
 		</crash>
 		  
 		<crash>
@@ -266,7 +266,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station2/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Missile.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Missile.wav</path>
 	   </crash>
 	   
 		<crash>
@@ -274,7 +274,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station5/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Missile.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Missile.wav</path>
 	   </crash>
 	   
 		<crash>
@@ -282,7 +282,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station6/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Missile.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Missile.wav</path>
 	   </crash>
 
 		<crash>
@@ -290,7 +290,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station3/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Bomb.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Bomb.wav</path>
 	   </crash>
 
 		<crash>
@@ -298,7 +298,7 @@
 		   <condition>
 			<property>fdm/jsbsim/systems/armament/station4/released</property>
 		   </condition>
-		   <path>Aircraft/MQ-9/Sounds/Bomb.wav</path>
+		   <path>Aircraft/MQ-9-Electric/Sounds/Bomb.wav</path>
 	   </crash>
 		
 	</fx>

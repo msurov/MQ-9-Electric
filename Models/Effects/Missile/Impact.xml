@@ -91,7 +91,7 @@
   </animation>
 
   <model>
-    <path>Aircraft/MQ-9/Models/Effects/Missile/Explosion.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Effects/Missile/Explosion.xml</path>
     <offsets>
       <x-m>  2.0 </x-m>
       <y-m>  0.0 </y-m>

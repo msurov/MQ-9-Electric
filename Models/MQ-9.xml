@@ -32,13 +32,13 @@
 
 	<model>
 		<name>Stores</name>
-		<path>Aircraft/MQ-9/Models/Stores/Stores.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Stores/Stores.xml</path>
 	</model>
 
 	<!-- Multiplayer sounds -->
 
 	<sound>
-		<path>Aircraft/MQ-9/Sounds/MP-Sounds.xml</path>
+		<path>Aircraft/MQ-9-Electric/Sounds/MP-Sounds.xml</path>
 	</sound>
 	
     <!-- Rembrandt transparent -->
@@ -53,19 +53,19 @@
             <property>/sim/rendering/rembrandt/enabled</property>
        	 </condition>
 		<object-name>Disk</object-name>
-		<object-name>BladesBlur</object-name>
+		<object-name>BladesFlat</object-name>
     </effect>
 	
 	<!-- Effects -->
 
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Effects.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Effects.xml</path>
 	</model>
 
 	<!-- Lights -->
 
 	<model>
-		<path>Aircraft/MQ-9/Models/Lights/LightPack.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Lights/LightPack.xml</path>
 	</model>
 
 	<nasal>
@@ -330,14 +330,14 @@
 	<!-- Normal Map -->
 
 	<effect>
-		<inherits-from>Aircraft/MQ-9/Models/Effects/Normal</inherits-from>
+		<inherits-from>Aircraft/MQ-9-Electric/Models/Effects/Normal</inherits-from>
 		<object-name>MQ-9</object-name>
 	</effect>
 
 	<!-- Specular Map -->
 	
 	<effect>
-		<inherits-from>Aircraft/MQ-9/Models/Effects/Specular</inherits-from>
+		<inherits-from>Aircraft/MQ-9-Electric/Models/Effects/Specular</inherits-from>
 		<object-name>MQ-9</object-name>
 	</effect>
 
@@ -345,7 +345,7 @@
 
 	<nasal>
 		<load>
-			var livery_update = aircraft.livery_update.new("Aircraft/MQ-9/Models/Liveries");
+			var livery_update = aircraft.livery_update.new("Aircraft/MQ-9-Electric/Models/Liveries");
 		</load>
 		<unload>
 			livery_update.stop();
@@ -357,21 +357,21 @@
 		<object-name>MQ-9</object-name>
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
-		<texture>Aircraft/MQ-9/Models/Liveries/Default.jpg</texture>
+		<texture>Aircraft/MQ-9-Electric/Models/Liveries/Default.jpg</texture>
 	</animation>
 	
 	<animation>
 		<type>material</type>
 		<object-name>Disk</object-name>
 		<texture-prop>texture</texture-prop>
-		<texture>Aircraft/MQ-9/Models/Liveries/Disk.png</texture>
+		<texture>Aircraft/MQ-9-Electric/Models/Liveries/Disk.png</texture>
 	</animation>
 
 	<animation>
 		<type>material</type>
-		<object-name>BladesBlur</object-name>
+		<object-name>BladesFlat</object-name>
 		<texture-prop>texture</texture-prop>
-		<texture>Aircraft/MQ-9/Models/Liveries/Disk.png</texture>
+		<texture>Aircraft/MQ-9-Electric/Models/Liveries/Disk.png</texture>
 	</animation>
 
 	<!-- Animations -->
@@ -382,7 +382,7 @@
 		<type>rotate</type>
 		<object-name>AileronR</object-name>
 		<property>surface-positions/left-aileron-pos-norm</property>
-		<factor>20</factor>
+		<factor>-20</factor>
 		<axis>   
 			<x1-m>  0.6977</x1-m>
 			<y1-m>  5.5070</y1-m>
@@ -397,7 +397,7 @@
 		<type>rotate</type>
 		<object-name>AileronL</object-name>
 		<property>surface-positions/left-aileron-pos-norm</property>
-		<factor>20</factor>
+		<factor>-20</factor>
 		<axis>   
 			<x1-m>  0.6977</x1-m>
 			<y1-m> -5.5070</y1-m>
@@ -476,7 +476,7 @@
 		<type>rotate</type>
 		<object-name>ElevatorR</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>-20</factor>
+		<factor>20</factor>
 		<axis>   
 			<x1-m> 3.4018</x1-m>
 			<y1-m> 0.4181</y1-m>
@@ -491,7 +491,7 @@
 		<type>rotate</type>
 		<object-name>ElevatorL</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>20</factor>
+		<factor>-20</factor>
 		<axis>   
 			<x1-m> 3.4018</x1-m>
 			<y1-m>-0.4181</y1-m>
@@ -508,7 +508,7 @@
 		<type>rotate</type>
 		<object-name>Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
-		<factor>20</factor>
+		<factor>-20</factor>
 		<axis>   
 			<x1-m> 3.3652</x1-m>
 			<y1-m> 0.0000</y1-m>
@@ -655,8 +655,8 @@
 		<type>spin</type>
 		<object-name>Propeller</object-name>
 		<object-name>Blades</object-name>
-		<property>engines/engine[0]/n2</property>
-		<factor>3</factor>
+		<property>engines/engine[0]/rpm</property>
+		<factor>-0.1</factor>
 		<center>
 			<x-m>4.4823</x-m>
 			<y-m>0.0000</y-m>
@@ -674,8 +674,8 @@
 		<object-name>Blades</object-name>
 		<condition>
 			<less-than>
-				<property>engines/engine[0]/n2</property>
-				<value>50.0001</value>
+				<property>engines/engine[0]/rpm</property>
+				<value>1000.0001</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -685,12 +685,12 @@
 		<object-name>BladesFlat</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[0]/n2</property>
-				<value>50.000</value>
+				<property>engines/engine[0]/rpm</property>
+				<value>1000.000</value>
 			</greater-than>
 			<less-than>
-				<property>engines/engine[0]/n2</property>
-				<value>70.0001</value>
+				<property>engines/engine[0]/rpm</property>
+				<value>1500.0001</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -698,7 +698,7 @@
 	<animation>
 		<type>spin</type>
 		<object-name>BladesFlat</object-name>
-		<property>engines/engine[0]/n2</property>
+		<property>engines/engine[0]/rpm</property>
 		<center>
 			<x-m>4.4823</x-m>
 			<y-m>0.0000</y-m>
@@ -716,8 +716,8 @@
 		<object-name>Disk</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[0]/n2</property>
-				<value>70.0000</value>
+				<property>engines/engine[0]/rpm</property>
+				<value>1500.0000</value>
 			</greater-than>
 		</condition>
 	</animation>
@@ -725,8 +725,8 @@
 	<animation>
 		<type>spin</type>
 		<object-name>Disk</object-name>
-		<property>engines/engine[0]/n2</property>
-		<factor>.5</factor>   
+		<property>engines/engine[0]/rpm</property>
+		<factor>-0.1</factor>
 		<center>
 			<x-m>4.4823</x-m>
 			<y-m>0.0000</y-m>

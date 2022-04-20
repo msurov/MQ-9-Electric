@@ -4,7 +4,7 @@
 
 	<submodel>
 		<name>Impact</name>
-		<model>Aircraft/MQ-9/Models/Effects/Bomb/Impact.xml</model> 
+		<model>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Impact.xml</model> 
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>

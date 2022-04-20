@@ -2,7 +2,7 @@
 
 	<submodel>
 		<name>AGM-114-1</name>
-		<model>Aircraft/MQ-9/Models/Stores/AGM-114/AGM-114-L.xml</model>
+		<model>Aircraft/MQ-9-Electric/Models/Stores/AGM-114/AGM-114-L.xml</model>
 		<trigger>fdm/jsbsim/systems/armament/station1/released</trigger>
 		<speed>600</speed>
 		<repeat>false</repeat>
@@ -23,12 +23,12 @@
         <collision-report>sim/ai/aircraft/collision/gun</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
 	</submodel>
 	
 	<submodel>
 		<name>AGM-114-2</name>
-		<model>Aircraft/MQ-9/Models/Stores/AGM-114/AGM-114-L.xml</model>
+		<model>Aircraft/MQ-9-Electric/Models/Stores/AGM-114/AGM-114-L.xml</model>
 		<trigger>fdm/jsbsim/systems/armament/station2/released</trigger>
 		<speed>600</speed>
 		<repeat>false</repeat>
@@ -49,12 +49,12 @@
         <collision-report>sim/ai/aircraft/collision/gun</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
 	</submodel>
 	
 	<submodel>
 		<name>AGM-114-5</name>
-		<model>Aircraft/MQ-9/Models/Stores/AGM-114/AGM-114-L.xml</model>
+		<model>Aircraft/MQ-9-Electric/Models/Stores/AGM-114/AGM-114-L.xml</model>
 		<trigger>fdm/jsbsim/systems/armament/station5/released</trigger>
 		<speed>600</speed>
 		<repeat>false</repeat>
@@ -75,12 +75,12 @@
         <collision-report>sim/ai/aircraft/collision/gun</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
 	</submodel>
 	
 	<submodel>
 		<name>AGM-114-6</name>
-		<model>Aircraft/MQ-9/Models/Stores/AGM-114/AGM-114-L.xml</model>
+		<model>Aircraft/MQ-9-Electric/Models/Stores/AGM-114/AGM-114-L.xml</model>
 		<trigger>fdm/jsbsim/systems/armament/station6/released</trigger>
 		<speed>600</speed>
 		<repeat>false</repeat>
@@ -101,12 +101,12 @@
         <collision-report>sim/ai/aircraft/collision/gun</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Missile/Missile-Submodel.xml</submodel-path> 
 	</submodel>
 
 	<submodel>
         <name>GBU-12-3</name>
-        <model>Aircraft/MQ-9/Models/Stores/GBU-12/GBU-12-3.xml</model>
+        <model>Aircraft/MQ-9-Electric/Models/Stores/GBU-12/GBU-12-3.xml</model>
         <trigger>fdm/jsbsim/systems/armament/station3/released</trigger>
         <trigger-once>true</trigger-once>
         <speed>0.0</speed>
@@ -123,12 +123,12 @@
         <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>  
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>  
     </submodel>
 	
 	<submodel>
         <name>GBU-12-4</name>
-        <model>Aircraft/MQ-9/Models/Stores/GBU-12/GBU-12-4.xml</model>
+        <model>Aircraft/MQ-9-Electric/Models/Stores/GBU-12/GBU-12-4.xml</model>
         <trigger>fdm/jsbsim/systems/armament/station4/released</trigger>
         <trigger-once>true</trigger-once>
         <speed>0.0</speed>
@@ -145,7 +145,7 @@
         <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
         <impact>true</impact>
         <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-        <submodel-path>Aircraft/MQ-9/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>  
+        <submodel-path>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>  
     </submodel>
 
 </PropertyList>

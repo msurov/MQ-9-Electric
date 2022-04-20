@@ -49,7 +49,7 @@
 	</animation>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Fire.xml</path>
 		<offsets>
 		  <x-m> 2.00</x-m>
 		  <y-m> 0.00</y-m>
@@ -58,7 +58,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Fire.xml</path>
 		<offsets> 
 		  <x-m>-0.88</x-m>
 		  <y-m> 0.00</y-m>
@@ -67,7 +67,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Bomb/Fire.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Bomb/Fire.xml</path>
 		<offsets>
 		  <x-m>-0.82</x-m>
 		  <y-m> 0.00</y-m>

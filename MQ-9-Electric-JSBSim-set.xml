@@ -4,25 +4,25 @@
 
 	<sim>
 	
-		<description>General Atomics MQ-9 Reaper</description>
-		<aircraft-version>1.2</aircraft-version>
+		<description>General Atomics MQ-9 Reaper bombable</description>
+		<aircraft-version>1.4</aircraft-version>
 		<author>Petar Jedvaj</author>
 		<status>Alpha</status>
 		<rating>
-			<FDM type="int">1</FDM>
+			<FDM type="int">3</FDM>
 			<systems type="int">1</systems>
 			<cockpit type="int">1</cockpit>
-			<model type="int">1</model>
+			<model type="int">5</model>
 		</rating>
 		<flight-model>jsb</flight-model>
-		<aero>MQ-9-JSBSim2</aero>
+		<aero>MQ-9-Electric-JSBSim</aero>
 		
 		<startup>
-			<splash-texture>Aircraft/MQ-9/Splash2.png</splash-texture>
+			<splash-texture>Aircraft/MQ-9-Electric/Splash.png</splash-texture>
 		</startup>
 	
 	    <model>
-			<path>Aircraft/MQ-9/Models/MQ-9-2.xml</path>
+			<path>Aircraft/MQ-9-Electric/Models/MQ-9.xml</path>
 			<livery>
 				<file type="string"/>
 			</livery>
@@ -42,8 +42,13 @@
             </map>
 	    </model>
 		
+		<submodels>
+			<serviceable type="bool">1</serviceable>
+			<path>Aircraft/MQ-9-Electric/Models/Submodels.xml</path>
+		</submodels>
+		
 		<sound>
-			<path>Aircraft/MQ-9/Sounds/Sounds.xml</path>
+			<path>Aircraft/MQ-9-Electric/Sounds/Sounds.xml</path>
 		</sound>
 		
 		<systems>
@@ -70,7 +75,7 @@
 		
 		<!-- HUD -->
 		<hud>
-			<path n="1">Aircraft/MQ-9/HUD.xml</path>
+			<path n="1">Aircraft/MQ-9-Electric/HUD.xml</path>
 			<visibility n="1">true</visibility>
    
 			<palette>
@@ -175,6 +180,21 @@
 		<help>
 			
 			<title>General Atomics MQ-9 Reaper</title>
+			
+			<key>
+				<name>1/2/3/4/5/6</name>
+				<desc>Select station</desc>
+			</key>
+			
+			<key>
+				<name>d</name>
+				<desc>Deselect all stations</desc>
+			</key>
+			
+			<key>
+				<name>f</name>
+				<desc>Release selected station</desc>
+			</key>
 
 			<line>MQ-9 > Autostart</line>
 			<line>MQ-9 > Select Livery</line>
@@ -185,11 +205,137 @@
 		</help>
 		
 	</sim>
+	
+	<!-- Armament -->
+	
+	<fdm>
+		<jsbsim>
+			<systems>
+				<armament>
+					<station1>
+						<selected type="double">0</selected>
+					</station1>
+					<station2>
+						<selected type="double">0</selected>
+					</station2>
+					<station3>
+						<selected type="double">0</selected>
+					</station3>
+					<station4>
+						<selected type="double">0</selected>
+					</station4>
+					<station5>
+						<selected type="double">0</selected>
+					</station5>
+					<station6>
+						<selected type="double">0</selected>
+					</station6>
+				</armament>
+			</systems>
+		</jsbsim>
+	</fdm>
 
 	<!-- Keyboard -->
 
 	<input>
 		<keyboard>
+			
+			<key n="49">
+				<name>1</name>
+				<desc>Station 1</desc>
+				<binding>
+					 <command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station1/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+
+			<key n="50">
+				<name>2</name>
+				<desc>Station 2</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station2/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+
+			<key n="51">
+				<name>3</name>
+				<desc>Station 3</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station3/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+
+			<key n="52">
+				<name>4</name>
+				<desc>Station 4</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station4/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+
+			<key n="53">
+				<name>5</name>
+				<desc>Station 5</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station5/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+
+			<key n="54">
+				<name>6</name>
+				<desc>Station 6</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station6/selected</property>
+					<value>1</value>
+				</binding>
+			</key>
+			
+			<key n="100">
+				<name>d</name>
+				<desc>Deselect all stations</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station1/selected</property>
+					<value type="int">0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station2/selected</property>
+					<value type="int">0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/station3/selected</property>
+					<value type="int">0</value>
+				</binding>
+			</key>
+			
+			<key n="102">
+				<name>f</name>
+				<desc>Release selected store</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/armament/release</property>
+					<value>1</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>fdm/jsbsim/systems/armament/release</property>
+						<value>0</value> 
+					</binding>
+				</mod-up>
+			</key>
 
 		</keyboard>
 	</input>
@@ -293,37 +439,36 @@
 	<nasal>
 		
 		<Liveries>
-			<file>Aircraft/MQ-9/Nasal/Liveries.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Liveries.nas</file>
 		</Liveries>
 		
 		<Engine>
-			<file>Aircraft/MQ-9/Nasal/Engine.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Engine.nas</file>
 			<module>MQ-9</module>
 		</Engine>
 		
 		<Lights>
-			<file>Aircraft/MQ-9/Nasal/Lights.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Lights.nas</file>
 		</Lights>
 		
 		<HUD>
-			<file>Aircraft/MQ-9/Nasal/HUD.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/HUD.nas</file>
 		</HUD>
 		
 		<Tyresmoke>
-			<file>Aircraft/MQ-9/Nasal/Tyresmoke.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Tyresmoke.nas</file>
 		</Tyresmoke>
 		
 		<Crash>
-			<file>Aircraft/MQ-9/Nasal/Crash.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Crash.nas</file>
 		</Crash>
 		
-                <Tracking>
-                        <file>Aircraft/MQ-9/Nasal/Tracking.nas</file>
-                </Tracking>
-
+		<Tracking>
+			<file>Aircraft/MQ-9-Electric/Nasal/Tracking.nas</file>
+		</Tracking>
 
 		<Turret>
-			<file>Aircraft/MQ-9/Nasal/Turret.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/Turret.nas</file>
 		</Turret>
 		
 		<rwr>
@@ -335,15 +480,15 @@
 		</radar2>
 		
 		<Radar>
-			<file>Aircraft/MQ-9/Nasal/Radar.nas</file> 
+			<file>Aircraft/MQ-9-Electric/Nasal/Radar.nas</file> 
 		</Radar>
 		
 		<ENAV>
-			<file>Aircraft/MQ-9/Nasal/ENAV.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/ENAV.nas</file>
 		</ENAV>
 		
 		<damage>
-			<file>Aircraft/MQ-9/Nasal/damage.nas</file>
+			<file>Aircraft/MQ-9-Electric/Nasal/damage.nas</file>
 		</damage>
 		
 	</nasal>

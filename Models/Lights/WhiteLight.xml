@@ -4,12 +4,12 @@
 
   <model>
     <name>WhiteLightFlare</name>
-    <path>Aircraft/MQ-9/Models/Lights/Flares/WhiteLight-flare.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Lights/Flares/WhiteLight-flare.xml</path>
   </model>
 
   <model>
     <name>WhiteLightRemb</name>
-    <path>Aircraft/MQ-9/Models/Lights/Rembrandt/WhiteLight-remb.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Lights/Rembrandt/WhiteLight-remb.xml</path>
   </model>
   
   <animation>

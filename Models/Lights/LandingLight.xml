@@ -4,17 +4,17 @@
 
   <model>
     <name>LandingLightFlash</name>
-    <path>Aircraft/MQ-9/Models/Lights/Flares/LandingLight-flash.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Lights/Flares/LandingLight-flash.xml</path>
   </model>
 
   <model>
     <name>LandingLightRemb</name>
-    <path>Aircraft/MQ-9/Models/Lights/Rembrandt/LandingLight-remb.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Lights/Rembrandt/LandingLight-remb.xml</path>
   </model>
   
   <!--><model>
     <name>LandingLightCone</name>
-    <path>Aircraft/MQ-9/Models/Lights/LightCone/LandingLight-cone.xml</path>
+    <path>Aircraft/MQ-9-Electric/Models/Lights/LightCone/LandingLight-cone.xml</path>
   </model><--> <!-- uncomment for fake non-rembrandt cones -->
 
   <animation>

@@ -6,7 +6,7 @@
 	
 	<model>
 		<name>Fire</name>
-		<path>Aircraft/MQ-9/Models/Effects/Engine/Fire.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Engine/Fire.xml</path>
 		<condition>
 			<equals>
 				<property>sim/crashed</property>
@@ -24,7 +24,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Engine/Smoke.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Engine/Smoke.xml</path>
 		<offsets>
 			<x-m> 3.9541</x-m>
 			<y-m> 0.0000</y-m>
@@ -33,7 +33,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Wing/Condensation.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Wing/Condensation.xml</path>
 		<offsets>
 			<x-m> 0.7973</x-m>
 			<y-m>11.6233</y-m>
@@ -42,7 +42,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/MQ-9/Models/Effects/Wing/Condensation.xml</path>
+		<path>Aircraft/MQ-9-Electric/Models/Effects/Wing/Condensation.xml</path>
 		<offsets>
 			<x-m>  0.7973</x-m>
 			<y-m>-11.6233</y-m>

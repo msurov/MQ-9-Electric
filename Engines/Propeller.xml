@@ -19,7 +19,7 @@
   <ixx>  17.16 </ixx>
   <diameter unit="IN"> 106.3 </diameter>
   <numblades> 4 </numblades>
-  <gearratio>  0.94 </gearratio>
+  <gearratio>  1.0 </gearratio>
   <p_factor>   8.40 </p_factor>
   <minpitch> 12 </minpitch>
   <maxpitch> 45 </maxpitch>

@@ -84,75 +84,12 @@
      <y>     0.00 </y>
      <z>   -10.82 </z>
    </location>
-   <pointmass name="Payload">
-    <description> 4039.89 LBS + full (1280 LBS) fuel should bring model up to entered max weight</description>
-    <weight unit="LBS">   2019.94 </weight>
-    <location name="POINTMASS" unit="IN">
-      <x> 207.84 </x>
-      <y>   0.00 </y>
-      <z> -10.82 </z>
-    </location>
-  </pointmass>
-  
-  <pointmass name="station1">
-      <weight unit="LBS"> 100 </weight>
-      <location name="POINTMASS" unit="IN">
-      	<x> 207.84 </x>
-      	<y>   0.00 </y>
-      	<z> -10.82 </z>
-      </location>
-  </pointmass>
-  
-   <pointmass name="station2">
-      <weight unit="LBS"> 100 </weight>
-      <location name="POINTMASS" unit="IN">
-          <x> 207.84 </x>
-          <y> -74 </y>
-          <z>  -3 </z>
-      </location>
-   </pointmass>
-   
-   <pointmass name="station3">
-      <weight unit="LBS"> 510 </weight>
-      <location name="POINTMASS" unit="IN">
-          <x> 207.84 </x>
-          <y> -48 </y>
-          <z>  -3 </z>
-      </location>
-   </pointmass>
-   
-   <pointmass name="station4">
-      <weight unit="LBS"> 510 </weight>
-      <location name="POINTMASS" unit="IN">
-          <x> 207.84 </x>
-          <y>  48 </y>
-          <z>  -3 </z>
-      </location>
-   </pointmass>
-   
-   <pointmass name="station5">
-      <weight unit="LBS"> 100 </weight>
-      <location name="POINTMASS" unit="IN">
-          <x> 207.84 </x>
-          <y>  74 </y>
-          <z>  -3 </z>
-      </location>
-   </pointmass>
-   
-   <pointmass name="station6">
-      <weight unit="LBS"> 100 </weight>
-      <location name="POINTMASS" unit="IN">
-          <x> 207.84 </x>
-          <y>  89 </y>
-          <z>  -3 </z>
-      </location>
-  </pointmass>
-  
+
  </mass_balance>
 
  <propulsion>
 
-   <engine file="TPE331-10">
+   <engine file="Electric">
     <location unit="IN">
       <x> 373.09 </x>
       <y>   0.00 </y>
@@ -164,7 +101,7 @@
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
-    <thruster file="Direct">
+    <thruster file="Propeller">
      <location unit="IN">
        <x> 373.09 </x>
        <y>   0.00 </y>
